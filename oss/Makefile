@@ -2,9 +2,9 @@
 .PHONY: fetch extract configure build patch
 all:: fetch extract configure build
 
-BASE_URL=http://memcached.googlecode.com/files
-VERSION=1.4.10
-PACKAGE_NAME=memcached
+BASE_URL=
+VERSION=
+PACKAGE_NAME=
 CODEC=tar.gz
 BASE_NAME=$(PACKAGE_NAME)-$(VERSION)
 FILE_NAME=$(BASE_NAME).$(CODEC)
@@ -19,7 +19,7 @@ PATCH_DIR=patch/$(VERSION)
 PWD=$(shell pwd)
 
 #
-# custom this
+# customize this
 #
 CONFIGURE_ARGS= --prefix=$(PWD)/install
 
